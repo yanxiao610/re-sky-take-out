@@ -75,14 +75,14 @@ public class EmployeeServiceImpl implements EmployeeService {
         //2还有一些数据是DTO中没有的，我们需要自己来设置 密码 创建时间 更新时间  状态 创建人 更新人
         employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
 
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
+        //employee.setCreateTime(LocalDateTime.now());
+        //employee.setUpdateTime(LocalDateTime.now());
 
         employee.setStatus(1);
 
         //线程池中找到id,在JwtTokenAdminInterceptor中设置了id到线程池中
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
+        //employee.setCreateUser(BaseContext.getCurrentId());
+        //employee.setUpdateUser(BaseContext.getCurrentId());
 
         //3调用mapper层的方法来插入数据
         employeeMapper.insert(employee);
