@@ -28,6 +28,7 @@ public interface EmployeeMapper {
     @AutoFill(value = OperationType.INSERT)
     void insert(Employee employee);
 
+    //分页查询
     Page<Employee> pagequery(EmployeePageQueryDTO employeePageQueryDTO);
 
     //修改状态

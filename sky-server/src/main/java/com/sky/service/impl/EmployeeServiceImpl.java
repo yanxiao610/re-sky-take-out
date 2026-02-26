@@ -90,7 +90,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO) {
-        //page页码 pageSize是每页记录数
+        //page当前的页码 pageSize是每页有多少的记录数
         //这里其实是完成分页操作
         PageHelper.startPage(employeePageQueryDTO.getPage(),employeePageQueryDTO.getPageSize());
 
